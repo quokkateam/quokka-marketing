@@ -1,0 +1,15 @@
+@import 'colors';
+
+footer {
+  padding: 25px 0;
+  text-align: center;
+
+  .copyright {
+    margin: 0;
+  }
+}
+
+footer * {
+  color: $secondary;
+  opacity: 0.6;
+}

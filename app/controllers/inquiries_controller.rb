@@ -6,12 +6,15 @@ class InquiriesController < ApplicationController
 
     if email.present? && school.present?
       begin
+        # Create new Inquiry
         inquiry = Inquiry.create!(school: school, email: email)
 
-        # send email to us about inquiry
+        # Email the Quokka team about new Inquiry
+        UserMailer.delay.register_inquiry(inquiry)
+
         render json: {}, status: 200
       rescue Exception => e
-        puts "Error creating Inquiry: #{e.message}"
+        logger.error { "Error creating Inquiry: #{e.message}" }
         render json: { error: 'Error creating Inquiry' }, status: 500
       end
     else

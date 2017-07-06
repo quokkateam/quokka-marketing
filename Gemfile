@@ -36,8 +36,12 @@ gem 'rails_12factor', group: :production
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'log4r', '1.1.10'
+
 gem 'figaro', '0.7.0'
 
 gem 'rb-readline', group: :development
+
+gem 'delayed_job_active_record', '4.1.0'
 
 ruby '2.3.0'

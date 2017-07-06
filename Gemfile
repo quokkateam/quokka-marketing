@@ -36,9 +36,8 @@ gem 'rails_12factor', group: :production
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-end
+gem 'figaro', '0.7.0'
+
+gem 'rb-readline', group: :development
 
 ruby '2.3.0'

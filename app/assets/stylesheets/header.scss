@@ -1,1 +1,67 @@
 @import 'colors';
+
+header {
+  width: 100%;
+  height: 626px;
+  background-image: url('https://s3-us-west-1.amazonaws.com/quokkadev/marketing/images/landing.jpg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: #fff;
+
+  .header-nav {
+    padding: 24px 85px;
+
+    a {
+      height: 54px;
+      width: auto;
+      display: inline-block;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+}
+
+div#welcome {
+  margin-top: 175px;
+}
+
+.welcome-main-text {
+  font-family: Avenir-Next-DemiBold;
+  font-size: 64px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.welcome-sub-text {
+  font-family: Lato-Light;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.primary-request-btn {
+  font-family: Avenir-Next-DemiBold;
+  margin: 0 auto;
+  display: block;
+  font-size: 14px;
+  border-radius: 4px;
+  background-color: $primary;
+  padding: 16px 26px;
+  text-transform: uppercase;
+  text-align: center;
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
+
+  &:hover {
+    background-color: $primary-hover;
+  }
+
+  &:active {
+    background-color: $primary;
+  }
+}

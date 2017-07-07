@@ -40,6 +40,8 @@ gem 'log4r', '1.1.10'
 
 gem 'figaro', '0.7.0'
 
+gem 'newrelic_rpm'
+
 gem 'rb-readline', group: :development
 
 gem 'delayed_job_active_record', '4.1.0'

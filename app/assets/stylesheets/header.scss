@@ -24,8 +24,9 @@ header {
   }
 }
 
-div#welcome {
+#welcome {
   margin-top: 175px;
+  padding: 0 4%;
 }
 
 .welcome-main-text {
@@ -63,5 +64,37 @@ div#welcome {
 
   &:active {
     background-color: $primary;
+  }
+}
+
+@media (max-width: 991px) {
+  header > .header-nav {
+    padding: 24px 4%;
+  }
+}
+
+@media (max-width: 845px) {
+  .welcome-main-text {
+    font-size: 50px;
+  }
+
+  .welcome-sub-text {
+    font-size: 20px;
+  }
+}
+
+
+@media (max-width: 626px) {
+  #welcome {
+    margin-top: 100px;
+  }
+
+  .welcome-main-text {
+    font-size: 44px;
+    line-height: 1.1;
+  }
+
+  .welcome-sub-text {
+    font-size: 20px;
   }
 }

@@ -1,3 +1,9 @@
+function makeJoinBtnsInteractive() {
+  $('[data-action=request-to-join]').click(function () {
+    $(document).scrollTo();
+  });
+}
+
 function makeInquiryInteractive() {
   $('[data-action=submit-inquiry]').click(function (e) {
     var inquiry = parseFields();
@@ -52,5 +58,6 @@ function onInquireComplete () {
 }
 
 $(document).ready(function () {
+  makeJoinBtnsInteractive();
   makeInquiryInteractive();
 });

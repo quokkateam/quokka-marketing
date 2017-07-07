@@ -12,6 +12,18 @@
   margin-bottom: 25px;
 }
 
+.about-category-desc {
+  text-align: center;
+  font-size: 16px;
+}
+
+.about-category > .icon {
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
 #mission {
   padding: 90px 140px;
   background: #fff;
@@ -22,17 +34,10 @@
   .about-category-title {
     font-family: Avenir-Next-Medium;
   }
-}
 
-.about-category-desc {
-  text-align: center;
-}
-
-.about-category > .icon {
-  height: 60px;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 40px;
+  .about-category-desc {
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 992px) {

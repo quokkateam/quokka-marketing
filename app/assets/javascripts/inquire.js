@@ -14,7 +14,7 @@ function makeInquiryInteractive() {
   });
 
   $('.inquiry-field').keypress(function (e) {
-    $(e.target).removeClass('invalid');
+    $(e.target).removeClass('invalid invalid-mobile');
     $('.submit-mobile').removeClass('completed').html('Submit');
   });
 }
@@ -28,10 +28,11 @@ function parseFields () {
 
 function isValidInquiry (data) {
   var isValid = true;
+  var isMobile = window.innerWidth < 991;
 
   for (var k in data) {
     if (!data[k]) {
-      $('.inquiry-field[name=' + k + ']').addClass('invalid');
+      $('.inquiry-field[name=' + k + ']').addClass(isMobile ? 'invalid-mobile' : 'invalid');
       isValid = false
     }
   }
@@ -78,4 +79,9 @@ function onDesktopComplete ($btn) {
 $(document).ready(function () {
   makeJoinBtnsInteractive();
   makeInquiryInteractive();
+
+  $(window).resize(function () {
+    $('.inquiry-field').removeClass('invalid invalid-mobile');
+    $('.submit-mobile').removeClass('completed').html('Submit');
+  });
 });

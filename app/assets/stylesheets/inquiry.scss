@@ -24,13 +24,16 @@
   border-radius: 3px;
   width: 310px;
   height: 44px;
-  line-height: 44px;
   padding-left: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   color: $default-dark;
   font-size: 14px;
+  line-height: 14px;
 
   &.invalid {
     box-shadow: 0 0 4px 2px $primary;
+    border: 1px solid red;
   }
 }
 
@@ -53,7 +56,7 @@
 .submit-desktop,
 .submit-mobile {
   background-color: $primary;
-
+d
   &:hover {
     background-color: $primary-hover;
   }

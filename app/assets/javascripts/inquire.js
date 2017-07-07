@@ -1,6 +1,6 @@
 function makeJoinBtnsInteractive() {
   $('[data-action=request-to-join]').click(function () {
-    $(document).scrollTo();
+    $('html, body').stop().animate({ scrollTop: $('#inquire')[0].offsetTop }, 600);
   });
 }
 

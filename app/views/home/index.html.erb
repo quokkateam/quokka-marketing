@@ -12,8 +12,33 @@
   </div>
 </header>
 <main>
+  <section id="mission">
+    <div class="container-fluid">
+      <div class="row">
+        <h2 class="about-category-title">Our Mission</h2>
+        <p class="about-category-desc">Quokka creates challenge-based wellness programs for universities that combine scientific research, incentives, and peer support to improve student health outcomes and increase engagement with current campus health resources.</p>
+      </div>
+    </div>
+  </section>
   <section id="about">
     <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4 col-sm-12 col-xs-12 about-category" id="challenges">
+          <img class="icon" src="<%= ENV['S3_URL'] %>/marketing/images/evidence.png">
+          <h2 class="about-category-title">Evidence-Based Challenges</h2>
+          <p class="about-category-desc">When students sign up for the program, they’re given weekly challenges—each based around one healthy habit—that are backed with scientific research and information about campus resources.</p>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12 about-category" id="prizes">
+          <img class="icon" src="<%= ENV['S3_URL'] %>/marketing/images/gift.png">
+          <h2 class="about-category-title">Events & Prizes</h2>
+          <p class="about-category-desc">They’ll be notified about challenge-related events hosted that week by wellness offices or student clubs and can win prizes from the community in return for their participation.</p>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12 about-category" id="community">
+          <img class="icon" src="<%= ENV['S3_URL'] %>/marketing/images/community.png">
+          <h2 class="about-category-title">Community</h2>
+          <p class="about-category-desc">When students test the habits out with their peers, they’ll have more fun and even greater accountability together.</p>
+        </div>
+      </div>
     </div>
   </section>
   <section id="inquire">

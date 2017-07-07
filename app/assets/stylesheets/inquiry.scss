@@ -23,6 +23,10 @@
     padding-left: 10px;
     color: $default-dark;
     font-size: 14px;
+
+    &.invalid {
+      box-shadow: 0 0 4px 2px $primary;
+    }
   }
 }
 
@@ -42,6 +46,19 @@
   }
 }
 
+button.submit-desktop,
+button.submit-mobile {
+  background-color: $primary;
+
+  &:hover {
+    background-color: $primary-hover;
+  }
+
+  &:active {
+    background-color: $primary;
+  }
+}
+
 button.submit-desktop {
   width: 40px;
   height: 40px;
@@ -51,11 +68,19 @@ button.submit-desktop {
   border: none;
   margin-left: 18px;
   margin-top: 2px;
-  background-color: $primary;
   background-image: url('https://s3-us-west-1.amazonaws.com/quokkadev/marketing/images/arrow-right.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50%;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+
+  &.completed {
+    background-image: url('https://s3-us-west-1.amazonaws.com/quokkadev/marketing/images/check.png');
+    background-color: $tertiary;
+  }
 }
 
 button.submit-mobile {

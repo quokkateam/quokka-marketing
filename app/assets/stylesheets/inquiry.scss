@@ -1,0 +1,63 @@
+@import 'colors';
+
+#inquire {
+  background-color: $secondary;
+  color: #fff;
+  padding: 60px 0;
+
+  .leading-inquiry-text {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 42px;
+    font-family: Avenir-Next-Thin;
+  }
+
+  .inquiry-field {
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    width: 310px;
+    height: 44px;
+    line-height: 44px;
+    padding-left: 10px;
+    color: $default-dark;
+    font-size: 14px;
+  }
+}
+
+.inquiry-field-container[role=school] {
+  padding-right: 9px;
+
+  * {
+    float: right;
+  }
+}
+
+.inquiry-field-container[role=email] {
+  padding-left: 9px;
+
+  * {
+    float: left;
+  }
+}
+
+button.submit-desktop {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  outline: none;
+  border: none;
+  margin-left: 18px;
+  margin-top: 2px;
+  background-color: $primary;
+  background-image: url('https://s3-us-west-1.amazonaws.com/quokkadev/marketing/images/arrow-right.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50%;
+}
+
+button.submit-mobile {
+  display: none;
+}

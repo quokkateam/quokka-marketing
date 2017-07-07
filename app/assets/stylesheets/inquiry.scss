@@ -97,6 +97,30 @@
   font-family: Avenir-Next-Medium;
   outline: none;
   border: none;
+
+  &.completed {
+    background-color: $tertiary;
+  }
+}
+
+.submit-mobile-container {
+  position: relative;
+
+  .horiz-spinner {
+    display: none;
+    top: 13px;
+    left: calc((100% - 70px)/2);
+  }
+
+  &.loading {
+    .submit-mobile {
+      color: transparent;
+    }
+
+    .horiz-spinner {
+      display: block;
+    }
+  }
 }
 
 @media (max-width: 991px) {

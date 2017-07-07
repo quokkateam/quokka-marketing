@@ -9,12 +9,13 @@ function makeInquiryInteractive() {
     var inquiry = parseFields();
 
     if (isValidInquiry(inquiry, true)) {
-      sendInquiry(inquiry);
+      sendInquiry(inquiry, e.target);
     }
   });
 
   $('.inquiry-field').keypress(function (e) {
     $(e.target).removeClass('invalid');
+    $('.submit-mobile').removeClass('completed').html('Submit');
   });
 }
 
@@ -38,21 +39,38 @@ function isValidInquiry (data) {
   return isValid;
 }
 
-function sendInquiry (data) {
+function sendInquiry (data, submitBtn) {
+  if ($(submitBtn).hasClass('submit-mobile')) {
+    $(submitBtn).parent().addClass('loading');
+  }
+
   $.ajax({
     type: "POST",
     url: '/inquire',
     data: data,
     dataType: 'application/json',
-    complete: onInquireComplete
+    complete: function () {
+      var $btn = $(submitBtn);
+      $btn.hasClass('submit-mobile') ? onMobileComplete($btn) : onDesktopComplete($btn);
+    }
   });
 }
 
-function onInquireComplete () {
-  $('.submit-desktop').addClass('completed');
+function onMobileComplete ($btn) {
+  setTimeout(function () {
+    $btn.html('Thanks!');
+    $btn.addClass('completed');
+    $btn.parent().removeClass('loading');
+    $('.inquiry-field').val('');
+  }, 1000);
+}
+
+function onDesktopComplete ($btn) {
+  $btn.removeClass('loading');
+  $btn.addClass('completed');
 
   setTimeout(function () {
-    $('.submit-desktop').removeClass('completed');
+    $btn.removeClass('completed');
     $('.inquiry-field').val('');
   }, 1200);
 }

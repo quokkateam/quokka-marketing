@@ -10,7 +10,7 @@ class InquiriesController < ApplicationController
         inquiry = Inquiry.create!(school: school, email: email)
 
         # Email the Quokka team about new Inquiry
-        UserMailer.delay.register_inquiry(inquiry)
+        # UserMailer.delay.register_inquiry(inquiry)
 
         render json: {}, status: 200
       rescue Exception => e

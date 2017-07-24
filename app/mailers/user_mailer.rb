@@ -10,6 +10,10 @@ class UserMailer < ActionMailer::Base
     send_email(@email, 'New Quokka Inquiry')
   end
 
+  def challenge(email)
+    send_email(email, 'Week 4 Challenge')
+  end
+
   def send_email(email, subject, custom_from = nil)
     if Utils::Env.is_enabled?('MAILER_PERFORM_DELIVERIES')
       logger.info { "Sending email to: #{email}, with subject, #{subject}" }

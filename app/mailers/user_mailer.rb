@@ -11,7 +11,7 @@ class UserMailer < ActionMailer::Base
   end
 
   def challenge(email)
-    send_email(email, 'Week 5 Challenge')
+    send_email(email, 'Week 4 Challenge')
   end
 
   def send_email(email, subject, custom_from = nil)
